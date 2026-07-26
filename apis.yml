@@ -1,7 +1,21 @@
 aid: evertune
 name: Evertune
-description: Evertune is a company surfaced as a portfolio company of felicis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Evertune is a Generative Engine Optimization (GEO) and AI brand-intelligence
+  platform that helps brands, marketers, and agencies understand, measure, and
+  influence how they appear in AI-driven recommendations. As discovery shifts
+  from traditional search engines to conversational answer engines like ChatGPT,
+  Claude, Gemini, and Perplexity, Evertune tracks brand visibility and sentiment
+  across 10+ AI models, analyzes how large language models describe a brand
+  versus its competitors, and delivers prescriptive message and content briefs
+  to improve that positioning. The platform combines large-scale prompt testing
+  (100,000+ prompt responses per report via direct base-model API access), the
+  EverPanel consumer panel, daily consumer-app data, an AI Brand Index and AI
+  Brand Score, content activation, and AI advertising. Founded in 2024 by
+  operators who helped scale The Trade Desk, Evertune is backed by Felicis and
+  serves customers including Roku, WPP, athenahealth, and HexClad. Evertune is
+  a data consumer of the major model APIs; it does not currently publish a
+  first-party developer API, SDK, or OpenAPI.
 url: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +23,30 @@ x-backed-by:
 - felicis
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/65fc8aa2e86478511b710078/68b8a3ea1e6fb2d5d5503742_Logo.svg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Generative Engine Optimization
+- AI Search
+- Brand Monitoring
+- Marketing Intelligence
+- AI Visibility
+- Analytics
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +55,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://evertune.ai
+  url: https://www.evertune.ai/
+- type: Documentation
+  url: https://docs.evertune.ai/
+- type: HelpCenter
+  url: https://docs.evertune.ai/
+- type: Pricing
+  url: https://www.evertune.ai/pricing
+- type: Blog
+  url: https://www.evertune.ai/resources/blog
+- type: Login
+  url: https://auth.evertune.ai/u/login/identifier
+- type: SignUp
+  url: https://www.evertune.ai/get-started
+- type: TermsOfService
+  url: https://www.evertune.ai/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.evertune.ai/legal/privacy-policy
+- type: LinkedIn
+  url: https://linkedin.com/company/evertune-ai
+- type: YouTube
+  url: https://www.youtube.com/@evertune-ai/videos
+- type: LLMsTxt
+  url: llms/evertune-llms.txt
+- type: DomainSecurity
+  url: security/evertune-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

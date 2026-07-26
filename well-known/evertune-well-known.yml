@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Evertune public hosts
+host: https://www.evertune.ai
+note: >-
+  Evertune publishes no /.well-known discovery surface on its own hosts; all
+  probed paths return 404. The only 200 is docs.evertune.ai/.well-known/security.txt,
+  which is served by Intercom (the docs/help-center platform) and belongs to
+  Intercom's Bugcrowd program (Canonical: app.intercom.com) -- it is NOT
+  Evertune's own security policy, so no SecurityTxt pointer is wired for Evertune.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+third_party:
+- host: https://docs.evertune.ai
+  path: /.well-known/security.txt
+  status: 200
+  owner: Intercom (docs/help-center platform)
+  canonical: https://app.intercom.com/.well-known/security.txt

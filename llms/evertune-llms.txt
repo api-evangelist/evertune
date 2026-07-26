@@ -1,0 +1,41 @@
+# Evertune | Improve Your Brand’s Visibility in AI Search
+
+Evertune is a comprehensive intelligence platform that helps brands, marketers, and agencies understand, measure, and influence how their brand appears in AI-driven recommendations. As discovery shifts from traditional search engines to conversational answer engines like ChatGPT, Claude, Gemini, and Perplexity, Evertune enables organizations to track their AI visibility, analyze how LLMs describe them, and take action to improve it. The platform combines large-scale prompt testing, narrative analytics, and prescriptive insights to help brands stay discoverable, accurately represented, and competitive as AI reshapes how people learn about and choose products.
+
+## Core Features
+
+### AI Brand Monitoring
+[AI Brand Monitoring](https://www.evertune.ai/products/brand-monitoring): This feature allows brands to track their visibility and performance across various AI platforms, ensuring they remain competitive in the evolving digital landscape.
+
+### AI Website Optimization
+[AI Website Optimization](https://www.evertune.ai/products/ai-website-optimization): Evertune provides tools and strategies to enhance website performance specifically for AI search engines, improving overall search visibility and user engagement.
+
+### Content Strategy
+[Content Strategy](https://www.evertune.ai/products/content-strategy): This section outlines effective content strategies tailored for AI-driven search environments, helping brands create relevant and engaging content that resonates with their target audience.
+
+### AI Brand Index
+[AI Brand Index](https://www.evertune.ai/research/ai-brand-index): A comprehensive index that evaluates and ranks brands based on their visibility and performance in AI search results, providing valuable insights for improvement.
+
+## Additional Resources
+
+### Blog
+[Blog](https://www.evertune.ai/research/blog): The Evertune blog features articles, insights, and updates on AI search trends, best practices, and case studies to help brands stay informed and ahead of the curve.
+
+### FAQ
+[FAQ](https://www.evertune.ai/research/faq): A resource for frequently asked questions regarding Evertune's services, features, and general inquiries to assist users in navigating the platform effectively.
+
+### Our Team
+[Our Team](https://www.evertune.ai/about-us/our-team): Meet the dedicated professionals behind Evertune, showcasing their expertise and commitment to enhancing brand visibility in AI search.
+
+### Careers
+[Careers](https://www.evertune.ai/about-us/careers): Evertune is growing quickly, hiring across engineering, data science, product, marketing, sales, and customer success teams in New York and Seattle. We’re building a high-performance culture centered on collaboration, curiosity, and ownership. Open roles include AI and data engineers, product designers, analytics specialists, sales leaders, and customer success managers—people excited to shape how brands understand and influence their presence in the era of AI-driven discovery.
+
+### Why Evertune?
+[Why Evertune?](https://www.evertune.ai/why-evertune): Evertune offers specialized solutions and integrations for different marketing organizations. Here's what sets us apart:
+
+- **Real Scale, Real Signal:** We analyze 100,000+ prompt responses per report for your brand. You get statistically sound insights, not a handful of guesses. Think presidential poll, not dinner - party.
+- **Clear Actions, Not Just Charts:** Get message briefs that show what topics to push, and which websites to influence. Know exactly how and where to act to boost visibility in AI-driven recommendations.
+- **Built by the People Who Scaled Programmatic:** Our founders helped build The Trade Desk. Now we’re applying that same scale, precision, and category-defining thinking to AI search.
+
+### Book demo
+[Book demo](https://www.evertune.ai/get-started): Schedule a demonstration of Evertune's capabilities to see firsthand how the platform can enhance your brand's visibility in AI search.
