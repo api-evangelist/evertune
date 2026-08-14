@@ -37,7 +37,7 @@ accessModel:
 image: https://cdn.prod.website-files.com/65fc8aa2e86478511b710078/68b8a3ea1e6fb2d5d5503742_Logo.svg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-13'
 tags:
 - Company
 - Generative Engine Optimization
@@ -76,12 +76,48 @@ common:
   url: https://linkedin.com/company/evertune-ai
 - type: YouTube
   url: https://www.youtube.com/@evertune-ai/videos
+- type: GitHubOrganization
+  url: https://github.com/Evertune-AI
 - type: LLMsTxt
   url: llms/evertune-llms.txt
 - type: DomainSecurity
   url: security/evertune-domain-security.yml
+- type: WellKnown
+  url: well-known/evertune-well-known.yml
+- type: Authentication
+  url: authentication/evertune-authentication.yml
+- type: OAuthScopes
+  url: scopes/evertune-scopes.yml
+- type: Conformance
+  url: conformance/evertune-conformance.yml
+- type: Plans
+  url: plans/evertune-plans-pricing.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 8
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Evertune is a consumer of the model providers' APIs rather than a publisher of
+    one — its own FAQ says base-model data is "reachable only through direct API
+    integration with the model provider" — and it ships no developer surface of its
+    own: the pricing page's two demo-led tiers name no API access, the Intercom help
+    center holds three end-user articles, and app.evertune.ai is a closed SPA whose
+    backend is undocumented; the only machine-readable thing Evertune serves is the
+    Auth0 OIDC discovery document on auth.evertune.ai, which signs users in to that
+    app.
+  evidence:
+  - url: https://auth.evertune.ai/.well-known/openid-configuration
+    status: 200
+  - url: https://www.evertune.ai/pricing
+    status: 200
+  - url: https://docs.evertune.ai/llms.txt
+    status: 200
+  - url: https://www.evertune.ai/openapi.json
+    status: 404
+  - url: https://www.evertune.ai/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-13'
