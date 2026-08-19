@@ -1,0 +1,33 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry searches 2026-08-13 (npm registry search + registry.npmjs.org,
+  pypi.org/pypi/evertune/json, rubygems.org, crates.io, GitHub org search) plus
+  the evertune.ai site and docs.evertune.ai help center
+package_count: 0
+packages: []
+note: >-
+  No first-party Evertune client library exists in any public registry. npm
+  search for "evertune" returns zero packages; pypi.org/pypi/evertune/json 404;
+  rubygems.org/api/v1/gems/evertune.json 404; crates.io returns no crate. The
+  only Evertune presence on GitHub is the organization
+  https://github.com/Evertune-AI, which has exactly one public repository --
+  "takehome" (Python, "Takehome Exercise for Evertune AI") -- a hiring exercise,
+  not a client library, so it is not recorded as a package. This is expected:
+  Evertune ships no developer API for an SDK to wrap. No SDKs pointer is wired.
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=evertune
+  result: 0 packages
+- registry: pypi
+  query: https://pypi.org/pypi/evertune/json
+  result: 404
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/evertune.json
+  result: 404
+- registry: crates.io
+  query: https://crates.io/api/v1/crates/evertune
+  result: no crate
+- registry: github
+  query: https://api.github.com/orgs/Evertune-AI/repos
+  result: 1 repo (takehome, hiring exercise)

@@ -1,0 +1,86 @@
+generated: '2026-08-13'
+method: probed
+source: https://auth.evertune.ai/.well-known/openid-configuration
+docs: null
+note: >-
+  These are the scopes_supported advertised by Evertune's Auth0 tenant at
+  auth.evertune.ai. They are the standard OpenID Connect identity/profile
+  scopes plus Auth0's offline_access -- they govern sign-in to the Evertune web
+  application, not access to any product API. Evertune publishes no developer
+  API and therefore no API permission/scope reference; there is no scopes or
+  permissions page on evertune.ai or docs.evertune.ai to search. Recorded
+  verbatim from the discovery document, with nothing added.
+schemes:
+- name: Auth0OIDC
+  source: well-known/evertune-openid-configuration.json
+  issuer: https://auth.evertune.ai/
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://auth.evertune.ai/authorize
+    tokenUrl: https://auth.evertune.ai/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://auth.evertune.ai/oauth/token
+  - flow: implicit
+    authorizationUrl: https://auth.evertune.ai/authorize
+scope_count: 14
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issues an ID token for the signed-in user.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: profile
+  description: Basic profile claims for the signed-in user.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: offline_access
+  description: Issues a refresh token for long-lived sessions.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: name
+  description: The user's full name claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: given_name
+  description: The user's given name claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: family_name
+  description: The user's family name claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: nickname
+  description: The user's nickname claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: email
+  description: The user's email address claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: email_verified
+  description: Whether the user's email address has been verified.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: picture
+  description: The user's profile picture claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: created_at
+  description: When the user account was created.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: identities
+  description: The linked identity providers for the user account.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: phone
+  description: The user's phone number claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+- scope: address
+  description: The user's address claim.
+  layer: identity
+  sources: [well-known/evertune-openid-configuration.json]
+api_scopes: []
+api_scopes_note: >-
+  No product/API scopes are published. Evertune ships no developer API, so no
+  audience-bound scopes (read:*, write:*) exist to record.

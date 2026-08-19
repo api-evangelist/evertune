@@ -1,0 +1,27 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.evertune.ai/pricing, https://docs.evertune.ai/en/, https://www.evertune.ai/resources/faq
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  Evertune publishes no API rate limits because it publishes no API. Searched
+  the pricing page, the Intercom help center (docs.evertune.ai -- three
+  articles, none developer-facing), the FAQ and the platform pages; none
+  documents an API, an API key, rate limits, quotas per request, or any
+  X-RateLimit / RateLimit / Retry-After response header. The only quota Evertune
+  publishes is a product entitlement, not a runtime API limit: 100,000 prompt
+  responses tracked per month on the Pro plan (see
+  plans/evertune-plans-pricing.yml). Recorded as an honest zero; no RateLimits
+  pointer is wired in apis.yml, because a limits document with nothing in it must
+  not read as a published rate-limit contract.
+x-evidence:
+- url: https://www.evertune.ai/pricing
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://docs.evertune.ai/llms.txt
+  http_status: 200
+  fetched: '2026-08-13'
+- url: https://www.evertune.ai/resources/faq
+  http_status: 200
+  fetched: '2026-08-13'

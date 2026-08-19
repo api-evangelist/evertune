@@ -1,0 +1,89 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  live probes of Evertune hosts 2026-08-13 (auth.evertune.ai discovery
+  documents, www/app/docs .well-known matrix, contract-discovery sweep)
+note: >-
+  Evertune is a data CONSUMER of the major model-provider APIs (its own FAQ:
+  "Base model responses are reachable only through direct API integration with
+  the model provider"). It publishes no first-party API of its own, so every
+  API-contract standard below is recorded false on evidence, not on assumption.
+  The standards it does conform to are all identity-layer, served by its Auth0
+  tenant on auth.evertune.ai.
+standards:
+- id: oidc-discovery
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  evidence: https://auth.evertune.ai/.well-known/openid-configuration returns 200 application/json with issuer, authorization_endpoint, token_endpoint, jwks_uri
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  evidence: discovery document advertises authorization_endpoint, token_endpoint, revocation_endpoint and 13 grant types
+- id: rfc8414
+  name: OAuth 2.0 Authorization Server Metadata
+  conforms: true
+  evidence: https://auth.evertune.ai/.well-known/oauth-authorization-server returns 200 with the metadata document
+- id: rfc7636
+  name: PKCE
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256
+- id: rfc8628
+  name: OAuth 2.0 Device Authorization Grant
+  conforms: true
+  evidence: device_authorization_endpoint https://auth.evertune.ai/oauth/device/code
+- id: rfc8693
+  name: OAuth 2.0 Token Exchange
+  conforms: true
+  evidence: grant_types_supported includes urn:ietf:params:oauth:grant-type:token-exchange
+- id: rfc9449
+  name: OAuth 2.0 Demonstrating Proof of Possession (DPoP)
+  conforms: true
+  evidence: dpop_signing_alg_values_supported = [ES256]
+- id: rfc7591
+  name: OAuth 2.0 Dynamic Client Registration
+  conforms: true
+  evidence: registration_endpoint https://auth.evertune.ai/oidc/register
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: no spec at any probed path on www/app/docs/auth evertune.ai; app.evertune.ai is an SPA catch-all that returns 200 text/html for every path including /openapi.json
+- id: asyncapi
+  name: AsyncAPI
+  conforms: false
+  evidence: no event, streaming or webhook surface documented on evertune.ai or docs.evertune.ai
+- id: graphql
+  name: GraphQL
+  conforms: false
+  evidence: no /graphql endpoint on any Evertune host (app.evertune.ai/graphql is the SPA HTML shell, not a GraphQL server)
+- id: mcp
+  name: Model Context Protocol
+  conforms: false
+  evidence: mcp.evertune.ai NXDOMAIN; no MCP server published in docs, registries or the web
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json 404 on all four Evertune hosts
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence: 404 on www/app/auth evertune.ai; the 200 on docs.evertune.ai is Intercom's, canonical app.intercom.com
+- id: rfc9457
+  name: Problem Details for HTTP APIs
+  conforms: false
+  evidence: no public API to return problem+json
+- id: rfc8594
+  name: Sunset header / deprecation policy
+  conforms: false
+  evidence: no versioning or deprecation policy published
+- id: llmstxt
+  name: llms.txt
+  conforms: true
+  evidence: https://www.evertune.ai/llms.txt returns 200 text/plain (4035 bytes); https://docs.evertune.ai/llms.txt returns 200 (Intercom-generated help-center index)
+compliance_program:
+  published: false
+  certifications: []
+  evidence: >-
+    No trust center, security page or certification claim found. trust.evertune.ai
+    and status.evertune.ai do not resolve; www.evertune.ai/security returns 404;
+    probe-security-programs.py returned vdp=none trust=none. No SOC 2 / ISO 27001
+    claim appears anywhere on evertune.ai. No Compliance pointer is wired.

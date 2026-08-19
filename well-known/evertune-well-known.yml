@@ -1,23 +1,136 @@
-generated: '2026-07-19'
+generated: '2026-08-13'
 method: searched
-source: live probes of Evertune public hosts
-host: https://www.evertune.ai
+source: live probes of every Evertune-controlled host, 2026-08-13
+hosts:
+- https://www.evertune.ai
+- https://docs.evertune.ai
+- https://app.evertune.ai
+- https://auth.evertune.ai
 note: >-
-  Evertune publishes no /.well-known discovery surface on its own hosts; all
-  probed paths return 404. The only 200 is docs.evertune.ai/.well-known/security.txt,
-  which is served by Intercom (the docs/help-center platform) and belongs to
-  Intercom's Bugcrowd program (Canonical: app.intercom.com) -- it is NOT
-  Evertune's own security policy, so no SecurityTxt pointer is wired for Evertune.
+  Evertune serves a real /.well-known discovery surface on auth.evertune.ai --
+  its Auth0 tenant on its own domain (CNAME to
+  evertune-cd-hgvejvwbyvwd7xad.edge.tenants.us.auth0.com, issuer
+  https://auth.evertune.ai/), which is the Login host already recorded in
+  apis.yml. Both OIDC discovery (OpenID Connect Discovery 1.0) and RFC 8414
+  OAuth 2.0 Authorization Server Metadata return 200 with the same JSON
+  document. This is the sign-in surface for the Evertune web application; it is
+  NOT a developer API authorization server -- Evertune publishes no first-party
+  API, and no client-credentials developer program is documented anywhere on
+  its site or help center. www.evertune.ai, app.evertune.ai and
+  docs.evertune.ai return 404 on every /.well-known path probed. The one 200 on
+  docs.evertune.ai/.well-known/security.txt is served by Intercom (the
+  help-center platform) and belongs to Intercom's Bugcrowd program
+  (Canonical: app.intercom.com) -- it is NOT Evertune's own security policy, so
+  no SecurityTxt pointer is wired for Evertune.
 documents:
-- path: /.well-known/security.txt
+- host: https://auth.evertune.ai
+  path: /.well-known/openid-configuration
+  status: 200
+  content_type: application/json
+  file: evertune-openid-configuration.json
+- host: https://auth.evertune.ai
+  path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: application/json
+  file: evertune-oauth-authorization-server.json
+  note: byte-identical to the openid-configuration document (Auth0 serves one metadata doc at both paths)
+- host: https://auth.evertune.ai
+  path: /.well-known/jwks.json
+  status: 200
+  content_type: application/json
+  note: referenced by jwks_uri; not saved separately (rotating key material)
+- host: https://auth.evertune.ai
+  path: /.well-known/security.txt
   status: 404
-- path: /.well-known/openid-configuration
+- host: https://auth.evertune.ai
+  path: /.well-known/oauth-protected-resource
   status: 404
-- path: /.well-known/oauth-authorization-server
+- host: https://auth.evertune.ai
+  path: /.well-known/api-catalog
   status: 404
-- path: /.well-known/api-catalog
+- host: https://auth.evertune.ai
+  path: /.well-known/ai-plugin.json
   status: 404
-- path: /.well-known/ai-plugin.json
+- host: https://auth.evertune.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://auth.evertune.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://auth.evertune.ai
+  path: /.well-known/mcp.json
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/security.txt
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/oauth-protected-resource
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://www.evertune.ai
+  path: /.well-known/mcp.json
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/security.txt
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://app.evertune.ai
+  path: /.well-known/mcp.json
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://docs.evertune.ai
+  path: /.well-known/mcp.json
   status: 404
 third_party:
 - host: https://docs.evertune.ai
@@ -25,3 +138,4 @@ third_party:
   status: 200
   owner: Intercom (docs/help-center platform)
   canonical: https://app.intercom.com/.well-known/security.txt
+  counted: false

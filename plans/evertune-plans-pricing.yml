@@ -1,0 +1,62 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.evertune.ai/pricing
+currency: USD
+plan_count: 2
+note: >-
+  Evertune publishes two tiers on its pricing page. Both are demo-led -- every
+  call to action is "Request a demo"; there is no self-serve checkout, no free
+  trial and no public API access on either tier. A separate "Starter Plan Terms
+  of Service" exists at https://www.evertune.ai/legal/starter-plan-terms-of-service
+  and landing pages exist at /lp/get-started-pro-plan and
+  /lp/get-started-enterprise-plan, but no Starter tier or price is published on
+  the pricing page, so it is not recorded here as a plan.
+plans:
+- name: Pro
+  price: 800
+  price_display: $800 / month
+  currency: USD
+  billing_period: monthly
+  audience: mid-market brands
+  quota:
+    prompts_tracked: 100000
+    ai_models: 11
+    articles_per_month: 25
+    onboarding_sessions: 3
+  overage: unpublished
+  includes:
+  - 100,000 prompts tracked across 11 AI models
+  - Daily, weekly or monthly tracking frequency
+  - Global language and country tracking
+  - 25 AI-optimized articles per month
+  - 3 dedicated onboarding sessions
+  - Affiliate advertising partnerships
+  - AI Retargeting
+  api_access: false
+  self_serve: false
+  cta: Request a demo
+- name: Enterprise
+  price: null
+  price_display: Custom
+  currency: USD
+  billing_period: unpublished
+  audience: enterprise companies
+  quota:
+    content_generation: unlimited
+  overage: unpublished
+  includes:
+  - Everything in Pro
+  - Dedicated AI Success Manager
+  - Customized onboarding
+  - Deep analysis of your product category
+  - Unlimited content generation
+  - AI website optimization
+  - AI bot analytics for your domain
+  - SSO integration
+  api_access: false
+  self_serve: false
+  cta: Request a demo
+x-evidence:
+- url: https://www.evertune.ai/pricing
+  http_status: 200
+  fetched: '2026-08-13'
